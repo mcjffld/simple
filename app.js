@@ -14,7 +14,7 @@ var toCommonLogFormat = require('hapi-common-log');
 
 server.connection({
     host: 'localhost',
-    port: Number(process.argv[2] || 3000)
+    port: Number(process.env.PORT || 3000)
 });
 
 server.ext('onPostHandler', function (request, reply) {
